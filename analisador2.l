@@ -7,7 +7,9 @@ ID     [A-Za-z][A-Za-z0-9]*
 ESP         [\t\r" "]
 LER     "ler"
 OPERADOR_LOGICO "and"|"our"|"not"|">"|">="|"<"|"<="|"!="
-OPERADOR_ARITIMETICO "+"|"-"|"*"|"/"
+OPERADOR_ARITIMETICO "+"|"-"|"*"|"/"|"^"
+OPERADOR_REPETICAO "for"|"while"
+ESPECIAL "@"|"$"|"&"
 
 %%
 
@@ -30,6 +32,22 @@ OPERADOR_ARITIMETICO "+"|"-"|"*"|"/"
     printf("%s  :   operador aritmetico\n", yytext);
 }
 
+{ESPECIAL} {
+    printf("%s  :   caractere especial\n", yytext);
+}
+
+{DIGITO}{ESPECIAL}+{DIGITO} {
+    printf("%s  :   digito inválido", yytext);
+    erros++;
+    printf("    |   Erro na linha %d\n", linhas);
+}
+
+{ID}{ESPECIAL}+{ID} {
+    printf("%s  :   Identificador inválido", yytext);
+    erros++;
+    printf("    |   Erro na linha %d\n", linhas);
+}
+
 {OPERADOR_LOGICO} {
     printf("%s  :   operador logico\n", yytext);
 }
@@ -40,8 +58,12 @@ OPERADOR_ARITIMETICO "+"|"-"|"*"|"/"
     printf("    |   Erro na linha %d\n", linhas);
 }
 
+{OPERADOR_REPETICAO} {
+    printf("%s  :   operador de repetição\n", yytext);
+}
+
 "{"|"}" {
-    printf("%s  :   chaves", yytext);
+    printf("%s  :   chaves\n", yytext);
 }
 
 "=" {
@@ -60,7 +82,7 @@ OPERADOR_ARITIMETICO "+"|"-"|"*"|"/"
     printf("%s  :   imprimir o valor lido\n", yytext);
 }
 
-"if" {
+"if"|"else"|"elseif" {
     printf("%s  :   comando de comparação\n", yytext);
 }
 
@@ -126,6 +148,7 @@ OPERADOR_ARITIMETICO "+"|"-"|"*"|"/"
     erros++;
     printf("    |   Erro na linha %d\n", linhas);
 }
+
 
 
 %%

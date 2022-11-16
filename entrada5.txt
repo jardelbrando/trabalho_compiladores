@@ -1,0 +1,17 @@
+inicio
+
+real imc, peso, altura;
+
+imprima("Ola, este programa vai medir seu indice de massa corporal\n");
+imprima("Digite seu peso: ");
+ler(pe$so);
+imprima("Digite sua altura: ");
+ler(altu@ra);
+
+imc = (peso)/ (altura^2);
+
+imprima("seu imc e: " + imc);
+
+fim
+
+
