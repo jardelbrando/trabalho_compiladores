@@ -1,0 +1,32 @@
+inicio
+
+inteiro num, num2, num3;
+cadeia nome1, nome2, nome3;
+real altura1, altura2, altura3;
+
+ler("insira primeira idade:" num1);
+ler("insira segunda idade:" num2);
+ler("insira terceira idade:" num3);
+
+ler("insira primeiro nome:" nome1);
+ler("insira segundo nome:" nome2);
+ler("insira terceiro nome:" nome3);
+
+ler("insira a primeira altura:" altura1);
+ler("insira a segunda altura:" altura2);
+ler("insira a terceira altura:" altura3);
+
+if(altura1 > altura2 and altura1 > altura3){
+    imprima("O maior é" + nome1 + " com idade de" + num1);
+} else if(altura2 > altura1 and altura2 > altura3){
+    imprima("O maior é" + nome2)+ " com idade de" + num2;
+} else if(altura3 > altura1 and altura3 > altura2){
+    imprima("O maior é" + nome3)+ " com idade de" + num1;
+}
+
+if(nome1 >>> nom2 andand){
+    imprima("texto");
+    num2++;
+}
+
+fim

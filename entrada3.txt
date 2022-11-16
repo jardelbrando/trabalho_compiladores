@@ -1,0 +1,12 @@
+inicio
+
+caractere nome1, nome2;
+ler(nome1);
+ler(nome2);
+/*comentario em bloco louco*/
+//comentario em linha louuco
+
+imprima(nome1);
+imprima(nome2);
+
+fim

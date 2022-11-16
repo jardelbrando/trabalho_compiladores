@@ -1,0 +1,9 @@
+inicio
+
+inteiro num1, num2, soma;
+ler(num1);
+ler(num2);
+soma = num1 + num2;
+imprima(soma);
+
+fim
