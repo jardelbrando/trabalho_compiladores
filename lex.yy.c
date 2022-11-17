@@ -581,8 +581,8 @@ int yy_flex_debug = 0;
 #define YY_MORE_ADJ 0
 #define YY_RESTORE_YY_MORE_OFFSET
 char *yytext;
-#line 1 "analisador2.l"
-#line 2 "analisador2.l"
+#line 1 "analisador.l"
+#line 2 "analisador.l"
     int linhas = 1, erros = 0;
 #line 588 "lex.yy.c"
 #line 589 "lex.yy.c"
@@ -802,7 +802,7 @@ YY_DECL
 		}
 
 	{
-#line 14 "analisador2.l"
+#line 14 "analisador.l"
 
 
 #line 809 "lex.yy.c"
@@ -864,12 +864,12 @@ do_action:	/* This label is used only to access EOF actions. */
 
 case 1:
 YY_RULE_SETUP
-#line 16 "analisador2.l"
+#line 16 "analisador.l"
 /* Espaços em braco (espaço ou tab) */
 	YY_BREAK
 case 2:
 YY_RULE_SETUP
-#line 18 "analisador2.l"
+#line 18 "analisador.l"
 {
     /* Controle de fluxo */
     printf("%s  :   inicio do programa\n", yytext);
@@ -877,35 +877,35 @@ YY_RULE_SETUP
 	YY_BREAK
 case 3:
 YY_RULE_SETUP
-#line 23 "analisador2.l"
+#line 23 "analisador.l"
 {
     printf("%s  :   fim do programa\n", yytext);
 }
 	YY_BREAK
 case 4:
 YY_RULE_SETUP
-#line 27 "analisador2.l"
+#line 27 "analisador.l"
 {
     printf("%s  :   tipo de variavel\n", yytext);
 }
 	YY_BREAK
 case 5:
 YY_RULE_SETUP
-#line 31 "analisador2.l"
+#line 31 "analisador.l"
 {
     printf("%s  :   operador aritmetico\n", yytext);
 }
 	YY_BREAK
 case 6:
 YY_RULE_SETUP
-#line 35 "analisador2.l"
+#line 35 "analisador.l"
 {
     printf("%s  :   caractere especial\n", yytext);
 }
 	YY_BREAK
 case 7:
 YY_RULE_SETUP
-#line 39 "analisador2.l"
+#line 39 "analisador.l"
 {
     printf("%s  :   digito inválido", yytext);
     erros++;
@@ -914,7 +914,7 @@ YY_RULE_SETUP
 	YY_BREAK
 case 8:
 YY_RULE_SETUP
-#line 45 "analisador2.l"
+#line 45 "analisador.l"
 {
     printf("%s  :   Identificador inválido", yytext);
     erros++;
@@ -923,14 +923,14 @@ YY_RULE_SETUP
 	YY_BREAK
 case 9:
 YY_RULE_SETUP
-#line 51 "analisador2.l"
+#line 51 "analisador.l"
 {
     printf("%s  :   operador logico\n", yytext);
 }
 	YY_BREAK
 case 10:
 YY_RULE_SETUP
-#line 55 "analisador2.l"
+#line 55 "analisador.l"
 {
     printf("%s  :   operador inválido", yytext);
     erros++;
@@ -939,21 +939,21 @@ YY_RULE_SETUP
 	YY_BREAK
 case 11:
 YY_RULE_SETUP
-#line 61 "analisador2.l"
+#line 61 "analisador.l"
 {
     printf("%s  :   operador de repetição\n", yytext);
 }
 	YY_BREAK
 case 12:
 YY_RULE_SETUP
-#line 65 "analisador2.l"
+#line 65 "analisador.l"
 {
     printf("%s  :   chaves\n", yytext);
 }
 	YY_BREAK
 case 13:
 YY_RULE_SETUP
-#line 69 "analisador2.l"
+#line 69 "analisador.l"
 {
     printf("%s  :   atribuicao\n", yytext);
 }
@@ -961,70 +961,70 @@ YY_RULE_SETUP
 case 14:
 /* rule 14 can match eol */
 YY_RULE_SETUP
-#line 73 "analisador2.l"
+#line 73 "analisador.l"
 {
     printf("%s  :   texto entre aspas\n", yytext);
 }
 	YY_BREAK
 case 15:
 YY_RULE_SETUP
-#line 77 "analisador2.l"
+#line 77 "analisador.l"
 {
     printf("%s  :   funcao de leitura\n", yytext);
 }
 	YY_BREAK
 case 16:
 YY_RULE_SETUP
-#line 81 "analisador2.l"
+#line 81 "analisador.l"
 {
     printf("%s  :   imprimir o valor lido\n", yytext);
 }
 	YY_BREAK
 case 17:
 YY_RULE_SETUP
-#line 85 "analisador2.l"
+#line 85 "analisador.l"
 {
     printf("%s  :   comando de comparação\n", yytext);
 }
 	YY_BREAK
 case 18:
 YY_RULE_SETUP
-#line 89 "analisador2.l"
+#line 89 "analisador.l"
 {
     printf("%s  :   Identificador\n", yytext);
 }
 	YY_BREAK
 case 19:
 YY_RULE_SETUP
-#line 93 "analisador2.l"
+#line 93 "analisador.l"
 {
     printf("%s  :   vírgula\n", yytext);
 }
 	YY_BREAK
 case 20:
 YY_RULE_SETUP
-#line 97 "analisador2.l"
+#line 97 "analisador.l"
 {
     printf("%s  :   ponto e vírgula\n", yytext);
 }
 	YY_BREAK
 case 21:
 YY_RULE_SETUP
-#line 101 "analisador2.l"
+#line 101 "analisador.l"
 {
     printf("%s  :   parenteses\n", yytext);
 }
 	YY_BREAK
 case 22:
 YY_RULE_SETUP
-#line 105 "analisador2.l"
+#line 105 "analisador.l"
 {
     printf("%s  :   numero inteiro\n", yytext);
 }
 	YY_BREAK
 case 23:
 YY_RULE_SETUP
-#line 109 "analisador2.l"
+#line 109 "analisador.l"
 {
     printf("%s  :   Identificador inválido", yytext);
     erros++;
@@ -1034,14 +1034,14 @@ YY_RULE_SETUP
 case 24:
 /* rule 24 can match eol */
 YY_RULE_SETUP
-#line 116 "analisador2.l"
+#line 116 "analisador.l"
 {
     printf("comentario em bloco  :   %s\n", yytext);
 }
 	YY_BREAK
 case 25:
 YY_RULE_SETUP
-#line 120 "analisador2.l"
+#line 120 "analisador.l"
 {
     /* Comentario de uma linha */
     printf("Comentario: %s\n", yytext);
@@ -1050,7 +1050,7 @@ YY_RULE_SETUP
 case 26:
 /* rule 26 can match eol */
 YY_RULE_SETUP
-#line 125 "analisador2.l"
+#line 125 "analisador.l"
 {
     printf("quebra de linha\n");
     linhas++;
@@ -1058,35 +1058,35 @@ YY_RULE_SETUP
 	YY_BREAK
 case 27:
 YY_RULE_SETUP
-#line 130 "analisador2.l"
+#line 130 "analisador.l"
 {
     printf("%s  :   acréscimo de um número inteiro\n", yytext);
 }
 	YY_BREAK
 case 28:
 YY_RULE_SETUP
-#line 134 "analisador2.l"
+#line 134 "analisador.l"
 {
     printf("%s  :   decréscimo de um número inteiro\n", yytext);
 }
 	YY_BREAK
 case 29:
 YY_RULE_SETUP
-#line 138 "analisador2.l"
+#line 138 "analisador.l"
 {
     printf("%s  :   acréscimo de um número inteiro em variavel\n", yytext);
 }
 	YY_BREAK
 case 30:
 YY_RULE_SETUP
-#line 142 "analisador2.l"
+#line 142 "analisador.l"
 {
     printf("%s  :   decréscimo de um número inteiro em variavel\n", yytext);
 }
 	YY_BREAK
 case 31:
 YY_RULE_SETUP
-#line 146 "analisador2.l"
+#line 146 "analisador.l"
 {
     printf("%s  :   operador aritimetico inválido", yytext);
     erros++;
@@ -1095,7 +1095,7 @@ YY_RULE_SETUP
 	YY_BREAK
 case 32:
 YY_RULE_SETUP
-#line 154 "analisador2.l"
+#line 154 "analisador.l"
 ECHO;
 	YY_BREAK
 #line 1102 "lex.yy.c"
@@ -2103,7 +2103,7 @@ void yyfree (void * ptr )
 
 #define YYTABLES_NAME "yytables"
 
-#line 154 "analisador2.l"
+#line 154 "analisador.l"
 
 
 int yywrap();
